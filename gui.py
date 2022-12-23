@@ -55,8 +55,6 @@ class Square(tk.Button):
         if not self.master.endgame and self.master.revealed_count == self.master.rows * self.master.cols - self.master.mines:
             self.master.winner()
 
-
-
     def flag_toggle(self, event):
         w = event.widget
         if w.flagged:
@@ -133,6 +131,7 @@ class Grid(tk.Frame):
 
     def winner(self):
         MsgBox.showinfo('Winner!', 'Congrats. You found all the mines.')
+
 
 class MainApplication(tk.Frame):
     def __init__(self, parent, *args, **kwargs):
